@@ -100,6 +100,13 @@ li{
 }
 
 #todoList p{
+    display: flex;
+    gap: 1rem;
+    color: var(--dark);
+    align-items: center;
+
+}
+#todoList .disabled{
     color: #8f98a8;
 
 }
@@ -107,6 +114,13 @@ li{
 .disabled{
     display: flex;
     text-decoration: line-through;
+}
+
+input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
 }
 /* targeting checkmark before marking it */
 input[type="checkbox"]::before{
@@ -122,7 +136,7 @@ input[type="checkbox"]::before{
     color: transparent;
 }
 /* Targeting checkmark when we are have checked it */
-input[type="checkbox"]::before::after{
+input[type="checkbox"]:checked::before{
     border: 0.06rem solid var(--green);
     border-radius: 50%;
     color: var(--white);
